@@ -1,0 +1,207 @@
+html,
+body {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+
+.outContent {
+    width: 1280px;
+    margin: 0 auto;
+
+    .main {
+        margin-top: -26px;
+        margin-bottom: 198px;
+        height: 472px;
+
+        .head {
+            height: 120px;
+            margin-top: 110px;
+            margin-bottom: 52px;
+
+            .section-title {
+                text-align: center;
+                padding: 32px;
+            }
+
+            .section-title__text {
+                font-size: 36px;
+                margin: 0;
+                display: inline-block;
+                position: relative;
+
+            }
+
+
+        }
+
+        .content {
+            display: flex;
+
+            .solution-card {
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+
+                &::after {
+                    display: table;
+                    content: '';
+                  }
+
+                .solution-card__item {
+                    margin-right: 16px;
+                    position: relative;
+                    height: 472px;
+                    width: 320px;
+                    background: #777;
+                    box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.04);
+                    border-radius: 20px;
+                    overflow: hidden;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transition: width 0.3s;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &.active {
+                        width: 640px;
+
+                        .solution-card__item-menu {
+                            filter: drop-shadow(0px 24px 80px rgba(34, 39, 56, 0.06));
+                            .solution-card__item-menu__text {
+                                font-size: 56px;
+                                color: #fff;
+                                line-height: 56px;
+                            }
+
+                            .solution-card__item-menu__list {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .solution-card__item-menu {
+                        background: linear-gradient(360deg, rgb(89, 136, 151) 0%, rgba(90, 137, 151, 0.8) 58.33%, rgba(90, 136, 151, 0) 100%);
+                        display: flex;
+                        align-items: flex-end;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 286px;
+                        width: 100%;
+                        padding: 36px 0;
+                        transition: width 0.3s;
+
+                        &>ul {
+                            margin-bottom: 0;
+                        }
+
+                        .solution-card__item-menu__text {
+                            padding: 0 32px;
+                            max-width: 320px;
+                            min-width: 320px;
+                            color: #fff;
+                            font-size: 36px;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+                            line-height: 56px;
+                            font-weight: bold;
+                            transition: all 0.3s;
+                            cursor: pointer;
+                        }
+
+                        .solution-card__item-menu__list {
+                            display: block;
+                            width: 320px;
+                            flex: 1;
+                            margin-bottom: 0;
+
+                            li:hover{
+                                cursor: pointer;
+                            }
+                            .solution-card__item-menu__list-item {
+                                white-space: nowrap;
+                                list-style: none;
+                                margin-bottom: 12px;
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                > a {
+                                    display: block;
+                                    position: relative;
+                                    color: rgba(255, 255, 255, 0.6);
+                                    font-size: 18px;
+                                    line-height: 25px;
+                                    transition: font-size 0.2s, transform 0.2s, font-weight 0.2s;
+                                }
+                                &.active {
+                                    > a {
+                                        color: rgba(255, 255, 255, 1);
+                                        transform: translateX(40px) scale(1.22);
+                                        font-weight: 600;
+                                        line-height: 31px;
+    
+                                        &::before {
+                                            position: absolute;
+                                            left: -18px;
+                                            top: 0;
+                                            content: '/';
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+
+                }
+
+                /* .child1 {
+                    background-image: url("../public/appnew/1.png");
+                    margin-right: 16px;
+                }
+
+                .child2 {
+                    background-image: url("../public/ecommerce/1.png");
+                    margin-right: 16px;
+                }
+
+                .child3 {
+                    background-image: url("../public/gamenew/1.png");
+                } */
+
+                .active {
+                    width: 640px;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+/* .animation-fadeIn.animation-active{
+    opacity: 1;
+    animation: 0.5s ease-out 0s 1 normal none running fadeIn;
+} */
+
